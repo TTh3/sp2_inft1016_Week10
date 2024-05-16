@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 10</title>
+  </head>
+  <body>
+    <!-- Week 10 Javascript Demo - 6th Task Done! -->
+    <h1>Week 10 JavaScript Demo - 6th Task</h1>
+
+    <h2>Normal Mouseover</h2>
+    <img
+      src="http://www.outgrabe.net/cat01.jpg"
+      onmouseover="this.src='http://www.outgrabe.net/cat02.jpg'"
+      onmouseout="this.src='http://www.outgrabe.net/cat01.jpg'"
+    />
+
+    <h2>Javascript MouseOver - AddEventListener</h2>
+    <img src="http://www.outgrabe.net/cat01.jpg" id="imgCat" />
+
+    <script>
+      // Using the addEventListenver - MouseOver Function
+      document
+        .getElementById("imgCat")
+        .addEventListener("mouseover", function () {
+          document.getElementById("imgCat").src =
+            "http://www.outgrabe.net/cat02.jpg";
+        });
+    </script>
+  </body>
+</html>

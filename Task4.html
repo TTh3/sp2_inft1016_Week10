@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 10</title>
+    
+    <!-- The script is moved up here to run before DOM execution -->
+    <script>
+        // by default counter is 0
+        counter = 0;
+
+        function countClicks() {
+            // counter adds 1 everytime countClicks() is ran
+            counter = counter + 1;
+            var output = 'The link was pressed ' + counter + ' times.';
+            var element = document.getElementById('boxy');
+            element.innerHTML = output;
+        }
+    </script>
+
+  </head>
+  <body>
+    <!-- Week 10 Javascript Demo - 4th Task Done! -->
+    <h1>JavaScript Demo</h1>
+    <a href="#" onclick="countClicks();">Click me</a>
+    <a href="#" id="mylink" onclick="document.getElementById('boxy').innerHTML = 'Interfered'">Interfered!</a>
+    <p id="boxy"></p>
+
+    <!-- <script>
+        document.getElementById('box').innerHTML = '<li>The link was pressed 1 times.</li>';
+    </script> -->
+  </body>
+</html>
