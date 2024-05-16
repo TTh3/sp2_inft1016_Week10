@@ -4,37 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 10</title>
-
-    <!-- The script is moved up here to run before DOM execution -->
-    <script>
-      // by default counter is 0
-      counter = 0;
-
-      function countClicks(element) {
-        // The Function countClicks(element) now has a parameter and in this case, the parameter is the action element itself
-        counter = counter + 1;
-        var output = "The link was pressed " + counter + " times.";
-        element.innerHTML = output;
-      }
-    </script>
   </head>
   <body>
-    <!-- Week 10 Javascript Demo - 5th Task Done! -->
-    <h1>JavaScript Demo</h1>
+    <!-- Week 10 Javascript Demo - 6th Task Done! -->
+    <h1>Week 10 JavaScript Demo - 6th Task</h1>
 
-    <!-- By using the keyword this, the element of itself is gonna change  -->
-    <a href="#" onclick="countClicks(this);">Click me</a>
-    
-    <a
-      href="#"
-      id="mylink"
-      onclick="document.getElementById('boxy').innerHTML = 'Interfered'"
-      >Interfered!</a
-    >
-    <p id="boxy"></p>
+    <h2>Normal Mouseover</h2>
+    <img
+      src="http://www.outgrabe.net/cat01.jpg"
+      onmouseover="this.src='http://www.outgrabe.net/cat02.jpg'"
+    />
 
-    <!-- <script>
-        document.getElementById('box').innerHTML = '<li>The link was pressed 1 times.</li>';
-    </script> -->
+    <h2>Javascript MouseOver - AddEventListener</h2>
+    <img src="http://www.outgrabe.net/cat01.jpg" id="imgCat" />
+
+    <script>
+      // Using the addEventListenver - MouseOver Function
+      document
+        .getElementById("imgCat")
+        .addEventListener("mouseover", function () {
+          document.getElementById("imgCat").src =
+            "http://www.outgrabe.net/cat02.jpg";
+        });
+    </script>
   </body>
 </html>
